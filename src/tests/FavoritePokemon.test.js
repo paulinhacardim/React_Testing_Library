@@ -32,6 +32,9 @@ describe('Teste o componente <FavoritePokemon.js />', () => {
 
     const noFavorite = screen.getByRole('link', { name: /favorite pokémon/i });
     userEvent.click(noFavorite);
-    // expect(noFavorite).toBeInTheDocument();
+    expect(noFavorite).toBeInTheDocument();
+
+    const pikachu = screen.getByText(/pikachu/i);
+    expect(pikachu).toBeInTheDocument();
   });
 });

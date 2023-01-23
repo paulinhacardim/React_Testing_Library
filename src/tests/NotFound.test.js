@@ -1,6 +1,6 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
-// import userEvent from '@testing-library/user-event';
+// // import userEvent from '@testing-library/user-event';
 // import { act } from 'react-dom/test-utils';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
@@ -19,7 +19,16 @@ describe('Teste o componente <NotFound.js />', () => {
     renderWithRouter(<App />);
 
     const imagem = screen.getByRole('img', { name: /pikachu crying because the page requested was not found/i });
-    // expect(imagem).toBeInTheDocument();
+    expect(imagem).toBeInTheDocument();
     expect(imagem.src).toBe('https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif');
   });
 });
+
+
+
+
+
+
+
+
+
